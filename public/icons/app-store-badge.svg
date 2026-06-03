@@ -1,8 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="180" height="54" viewBox="0 0 180 54" role="img" aria-label="Descargar en App Store">
-  <rect width="180" height="54" rx="10" fill="#0D0D0D"/>
-  <g fill="#F2EFEB" transform="translate(18 14)">
-    <path d="M14.5 7.6c-1.4 0-2.6.8-3.3.8-.7 0-1.8-.8-3-.8-1.9 0-3.7 1.4-3.7 4 0 2.6 1.9 5.4 3.1 5.4.7 0 1-.5 2-.5s1.2.5 2 .5c1.2 0 2.6-2.2 3-3.4-1.6-.7-1.9-3.1-.1-4.1-.5-.8-1.4-1.4-2-1.4zm-.8-1.4c.6-.7.5-1.7.5-1.8-.5 0-1.2.4-1.6.8-.4.5-.6 1.1-.5 1.8.5 0 1.1-.3 1.6-.8z"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="54" viewBox="0 0 180 54" role="img" aria-label="Descargar en la App Store">
+  <rect x=".5" y=".5" width="179" height="53" rx="10" fill="#0D0D0D" stroke="#A69C94" stroke-opacity=".35"/>
+  <!-- Official Apple silhouette (simpleicons), scaled from 24x24 -->
+  <g transform="translate(17 13) scale(1.18)" fill="#F2EFEB">
+    <path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/>
   </g>
-  <text x="46" y="22" fill="#A69C94" font-family="Quicksand, sans-serif" font-size="9">Descargar en la</text>
-  <text x="46" y="40" fill="#F2EFEB" font-family="Quicksand, sans-serif" font-size="17" font-weight="600">App Store</text>
+  <text x="56" y="22" fill="#A69C94" font-family="-apple-system, Helvetica, Arial, sans-serif" font-size="9">Descargar en la</text>
+  <text x="55" y="41" fill="#F2EFEB" font-family="-apple-system, Helvetica, Arial, sans-serif" font-size="18" font-weight="600">App Store</text>
 </svg>
