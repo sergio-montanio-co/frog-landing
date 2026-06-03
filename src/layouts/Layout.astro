@@ -1,0 +1,48 @@
+---
+import '../styles/global.css'
+import Nav from '../components/Nav.astro'
+import Footer from '../components/Footer.astro'
+
+export interface Props {
+  title: string
+  description?: string
+}
+
+const {
+  title,
+  description = 'Frog te ayuda a organizar el ahorro grupal para tu próximo viaje. Comparte un código, ahorra a tu ritmo, viaja sin estrés financiero.',
+} = Astro.props
+---
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#594731" />
+    <meta name="description" content={description} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={Astro.url.href} />
+    <meta property="og:image" content="https://frg.lat/og-image.png" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- iOS app banner (descomenta cuando tengas el APP_ID real) -->
+    <!-- <meta name="apple-itunes-app" content="app-id=1234567890" /> -->
+
+    <link rel="icon" href="/favicon.svg" />
+    <title>{title}</title>
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <Nav />
+    <main class="flex-1">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

@@ -1,0 +1,35 @@
+---
+const features = [
+  {
+    title: 'Códigos en lugar de listas',
+    body: 'Comparte un código corto. Tu grupo lo mete y solicita unirse. Cero captura de emails ni listas.',
+  },
+  {
+    title: 'Aportaciones libres',
+    body: 'Cada quien aporta a su ritmo — por día, por semana, por mes. La app lleva el registro.',
+  },
+  {
+    title: 'Caja de viáticos opcional',
+    body: 'Después de pagar vuelo y hotel, abre una segunda caja para tours y comida que se libera al inicio del viaje.',
+  },
+  {
+    title: 'Tú custodias el dinero',
+    body: 'Frog no procesa pagos. Los SPEI van directo a la cuenta del organizador. La app coordina.',
+  },
+]
+---
+<section class="px-4 py-16 bg-foreground/[0.02] border-y border-muted">
+  <div class="mx-auto max-w-5xl">
+    <h2 class="text-2xl sm:text-3xl font-semibold text-center mb-12">
+      ¿Cómo funciona?
+    </h2>
+    <div class="grid sm:grid-cols-2 gap-6">
+      {features.map(({ title, body }) => (
+        <div class="bg-background border border-muted rounded-card p-6">
+          <h3 class="font-semibold text-lg mb-2">{title}</h3>
+          <p class="text-secondary leading-relaxed">{body}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,22 @@
+---
+const links = [
+  { href: '/', label: 'Inicio' },
+  { href: '/privacy', label: 'Privacidad' },
+  { href: '/terms', label: 'Términos' },
+]
+---
+<nav class="sticky top-0 z-10 bg-background/95 backdrop-blur border-b border-muted">
+  <div class="mx-auto max-w-5xl px-4 py-3 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-2">
+      <span class="text-2xl">🐸</span>
+      <span class="font-semibold text-foreground">Frog</span>
+    </a>
+    <div class="flex gap-4 text-sm">
+      {links.map(({ href, label }) => (
+        <a href={href} class="text-secondary hover:text-foreground transition">
+          {label}
+        </a>
+      ))}
+    </div>
+  </div>
+</nav>

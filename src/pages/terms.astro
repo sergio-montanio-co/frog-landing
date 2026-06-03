@@ -1,0 +1,89 @@
+---
+import Layout from '../layouts/Layout.astro'
+
+const lastUpdated = '5 de junio de 2026'
+---
+<Layout title="Términos de Servicio · Frog">
+  <article class="prose mx-auto max-w-3xl px-4 py-12">
+    <h1>Términos de Servicio</h1>
+    <p class="text-secondary"><strong>Última actualización:</strong> {lastUpdated}</p>
+
+    <h2>1. Aceptación</h2>
+    <p>
+      Al usar Frog aceptas estos términos. Si no estás de acuerdo, no uses
+      el servicio.
+    </p>
+
+    <h2>2. Qué es Frog</h2>
+    <p>
+      Frog es una aplicación móvil que ayuda a grupos a coordinar el ahorro
+      para un viaje. Frog NO procesa pagos, NO custodia dinero, y NO actúa
+      como entidad financiera regulada. Todas las transferencias se
+      realizan directamente entre los usuarios (vía SPEI o el método que
+      elijan) fuera de la app.
+    </p>
+
+    <h2>3. Tu responsabilidad</h2>
+    <ul>
+      <li>Eres responsable de la precisión de la información que capturas (CLABE, montos, miembros).</li>
+      <li>El organizador del viaje es responsable de recibir, custodiar y, en su caso, devolver el dinero del grupo.</li>
+      <li>Frog no responde por disputas entre miembros sobre montos, fechas o ejecución del viaje.</li>
+    </ul>
+
+    <h2>4. Cuenta</h2>
+    <p>
+      Debes proporcionar información precisa al registrarte. Tú eres
+      responsable de mantener segura tu sesión. Avísanos si sospechas que
+      tu cuenta fue comprometida.
+    </p>
+
+    <h2>5. Uso aceptable</h2>
+    <p>No puedes:</p>
+    <ul>
+      <li>Usar la app para fraudes, lavado de dinero, o cualquier actividad ilegal.</li>
+      <li>Suplantar la identidad de otra persona.</li>
+      <li>Interferir con el funcionamiento del servicio.</li>
+    </ul>
+
+    <h2>6. Suspensión</h2>
+    <p>
+      Podemos suspender o terminar tu cuenta si violas estos términos. Si
+      tu cuenta es terminada, los viajes en los que participabas siguen
+      existiendo para los demás miembros.
+    </p>
+
+    <h2>7. Limitación de responsabilidad</h2>
+    <p>
+      Frog se proporciona "tal cual". No garantizamos que el servicio esté
+      libre de errores ni que cumpla con tus expectativas particulares.
+      Hasta donde la ley lo permita, no somos responsables de pérdidas
+      indirectas, lucro cesante, o daño emergente derivado del uso de la app.
+    </p>
+
+    <h2>8. Cambios</h2>
+    <p>
+      Podemos actualizar estos términos. Si los cambios son significativos,
+      te avisaremos en la app o por correo.
+    </p>
+
+    <h2>9. Ley aplicable</h2>
+    <p>
+      Estos términos se rigen por las leyes de México. Cualquier disputa se
+      resolverá ante los tribunales competentes de la Ciudad de México.
+    </p>
+
+    <h2>10. Contacto</h2>
+    <p>
+      <a href="mailto:soporte@frg.lat">soporte@frg.lat</a>
+    </p>
+  </article>
+</Layout>
+
+<style is:global>
+  .prose { line-height: 1.75; }
+  .prose h1 { font-size: 2.5rem; margin-bottom: 1rem; font-weight: 600; }
+  .prose h2 { font-size: 1.5rem; margin-top: 2.5rem; margin-bottom: 1rem; font-weight: 600; }
+  .prose p, .prose ul { margin-bottom: 1rem; }
+  .prose ul { padding-left: 1.5rem; list-style: disc; }
+  .prose a { color: #594731; text-decoration: underline; }
+</style>

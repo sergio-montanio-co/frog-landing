@@ -1,0 +1,116 @@
+---
+import Layout from '../layouts/Layout.astro'
+
+const lastUpdated = '5 de junio de 2026'
+---
+<Layout
+  title="Política de Privacidad · Frog"
+  description="Cómo Frog recolecta, usa y protege tu información personal."
+>
+  <article class="prose mx-auto max-w-3xl px-4 py-12">
+    <h1>Política de Privacidad</h1>
+    <p class="text-secondary"><strong>Última actualización:</strong> {lastUpdated}</p>
+
+    <p>
+      Bienvenido a Frog. Esta política explica qué información recolectamos
+      cuando usas nuestra aplicación móvil ("Frog" o el "Servicio"), cómo
+      la usamos, y los derechos que tienes sobre ella.
+    </p>
+
+    <h2>1. Quiénes somos</h2>
+    <p>
+      Frog es operado por Sergio Montaño, con domicilio en México y correo
+      de contacto <a href="mailto:soporte@frg.lat">soporte@frg.lat</a>.
+    </p>
+
+    <h2>2. Qué información recolectamos</h2>
+    <ul>
+      <li><strong>Información de cuenta:</strong> correo electrónico, número de teléfono (opcional), nombre y avatar (si los proporcionas vía Clerk, nuestro proveedor de autenticación).</li>
+      <li><strong>Información de viajes:</strong> nombres, destinos, fechas, montos de ahorro, miembros y cuentas bancarias del organizador (CLABE, banco, titular) que tú mismo capturas en la app.</li>
+      <li><strong>Información de uso:</strong> notificaciones que recibes y marcas como leídas, viajes en los que participas.</li>
+      <li><strong>Identificadores técnicos:</strong> token de notificaciones push (Expo), identificador único de usuario.</li>
+    </ul>
+
+    <h2>3. Para qué usamos tu información</h2>
+    <ul>
+      <li>Crear y administrar viajes, invitar a tu grupo y registrar aportaciones.</li>
+      <li>Enviarte notificaciones (push y correo) relacionadas con tus viajes.</li>
+      <li>Mostrar la cuenta del organizador a los miembros del viaje para que puedan realizar transferencias SPEI.</li>
+      <li>Diagnóstico técnico y mejora del servicio.</li>
+    </ul>
+
+    <h2>4. Con quién compartimos tu información</h2>
+    <ul>
+      <li><strong>Clerk</strong> (autenticación) — recibe correo, teléfono, nombre.</li>
+      <li><strong>Resend</strong> (envío de correo) — recibe correo del destinatario y contenido del mensaje.</li>
+      <li><strong>Mapbox</strong> (búsqueda de lugares) — recibe consultas de búsqueda cuando autocompletas un destino. No vinculamos las búsquedas a tu cuenta.</li>
+      <li><strong>Expo Push Notifications</strong> — recibe el token de tu dispositivo para enviarte notificaciones.</li>
+    </ul>
+    <p>Frog no vende tu información personal a terceros.</p>
+
+    <h2>5. Pagos y datos bancarios</h2>
+    <p>
+      Frog NO procesa pagos ni custodia dinero. La información bancaria del
+      organizador del viaje (CLABE, banco, titular) se almacena únicamente
+      para mostrarla a los miembros del viaje para fines de transferencia.
+      Los SPEI se realizan directamente entre el miembro y el organizador,
+      fuera de la app.
+    </p>
+
+    <h2>6. Seguridad</h2>
+    <p>
+      Toda la información viaja por canales encriptados (HTTPS/TLS). Tu
+      sesión está protegida con tokens generados por Clerk.
+    </p>
+
+    <h2>7. Tus derechos</h2>
+    <p>Tienes derecho a:</p>
+    <ul>
+      <li>Acceder a tu información personal.</li>
+      <li>Solicitar la corrección o eliminación de tu cuenta y datos.</li>
+      <li>Retirar tu consentimiento para recibir notificaciones.</li>
+    </ul>
+    <p>
+      Para ejercerlos, escríbenos a
+      <a href="mailto:soporte@frg.lat">soporte@frg.lat</a>. Atendemos en
+      hasta 15 días hábiles.
+    </p>
+
+    <h2>8. Niños</h2>
+    <p>
+      Frog está dirigido a personas mayores de 18 años. No recolectamos
+      información de menores intencionalmente.
+    </p>
+
+    <h2>9. Cambios</h2>
+    <p>
+      Podemos actualizar esta política. Te avisaremos por correo o dentro
+      de la app cuando haya cambios significativos.
+    </p>
+
+    <h2>10. Contacto</h2>
+    <p>
+      <a href="mailto:soporte@frg.lat">soporte@frg.lat</a>
+    </p>
+  </article>
+</Layout>
+
+<style is:global>
+  .prose {
+    line-height: 1.75;
+  }
+  .prose h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  .prose h2 {
+    font-size: 1.5rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  .prose p, .prose ul { margin-bottom: 1rem; }
+  .prose ul { padding-left: 1.5rem; list-style: disc; }
+  .prose a { color: #594731; text-decoration: underline; }
+</style>

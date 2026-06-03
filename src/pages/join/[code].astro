@@ -1,0 +1,78 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import DownloadButtons from '../../components/DownloadButtons.astro'
+
+export const prerender = false // SSR para aceptar cualquier código
+
+const { code } = Astro.params
+const normalizedCode = (code ?? '')
+  .toString()
+  .toUpperCase()
+  .replace(/[^A-Z0-9]/g, '')
+  .slice(0, 8)
+
+if (!normalizedCode || normalizedCode.length < 6) {
+  return Astro.redirect('/', 302)
+}
+---
+
+<Layout
+  title={`Únete con el código ${normalizedCode} — Frog`}
+  description={`Te invitaron a un viaje en Frog. Descarga la app y mete el código ${normalizedCode}.`}
+>
+  <section class="px-4 py-16 sm:py-24">
+    <div class="mx-auto max-w-2xl text-center">
+      <p class="text-sm uppercase tracking-widest text-secondary mb-4">
+        Te invitaron a un viaje
+      </p>
+      <h1 class="text-3xl sm:text-5xl font-semibold mb-8">
+        Tu código de unión
+      </h1>
+
+      <div class="inline-block bg-foreground/[0.03] border border-muted rounded-card px-8 py-6 mb-10">
+        <p class="text-5xl sm:text-7xl font-bold tracking-widest text-primary">
+          {normalizedCode}
+        </p>
+      </div>
+
+      <ol class="text-left max-w-md mx-auto space-y-4 mb-10 text-foreground">
+        <li class="flex gap-3">
+          <span class="font-semibold text-primary">1.</span>
+          Descarga Frog desde tu tienda de apps.
+        </li>
+        <li class="flex gap-3">
+          <span class="font-semibold text-primary">2.</span>
+          Crea una cuenta con tu correo.
+        </li>
+        <li class="flex gap-3">
+          <span class="font-semibold text-primary">3.</span>
+          En "Mis viajes", toca "Unirme con código" y mete <strong>{normalizedCode}</strong>.
+        </li>
+        <li class="flex gap-3">
+          <span class="font-semibold text-primary">4.</span>
+          El organizador del viaje aprobará tu solicitud.
+        </li>
+      </ol>
+
+      <DownloadButtons />
+
+      <p class="text-sm text-secondary mt-10">
+        ¿Ya tienes la app? Ábrela y pega el código manualmente desde
+        "Mis viajes → Unirme con código".
+      </p>
+    </div>
+  </section>
+</Layout>
+
+<script define:vars={{ normalizedCode }}>
+  // Si el deep link no abrió la app (no tiene AASA asociado o el
+  // navegador bloqueó), intentar el scheme custom como fallback
+  // después de 800ms.
+  const userAgent = navigator.userAgent
+  const isMobile = /iPhone|iPad|iPod|Android/.test(userAgent)
+  if (isMobile && normalizedCode) {
+    setTimeout(() => {
+      window.location.href = `frog://join/${normalizedCode}`
+    }, 800)
+  }
+</script>

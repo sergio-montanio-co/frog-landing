@@ -1,0 +1,33 @@
+---
+// URLs reales después del submit a stores. Por ahora placeholders.
+const appStoreUrl = 'https://apps.apple.com/app/idAPP_ID_PLACEHOLDER'
+const playStoreUrl = 'https://play.google.com/store/apps/details?id=com.montanio.frg'
+---
+<div class="flex flex-col sm:flex-row gap-3 justify-center items-center">
+  <a
+    href={appStoreUrl}
+    target="_blank"
+    rel="noopener"
+    class="block hover:opacity-80 transition"
+    aria-label="Descargar en App Store"
+  >
+    <img
+      src="/icons/app-store-badge.svg"
+      alt="Descargar en App Store"
+      class="h-12"
+    />
+  </a>
+  <a
+    href={playStoreUrl}
+    target="_blank"
+    rel="noopener"
+    class="block hover:opacity-80 transition"
+    aria-label="Conseguir en Google Play"
+  >
+    <img
+      src="/icons/google-play-badge.svg"
+      alt="Conseguir en Google Play"
+      class="h-12"
+    />
+  </a>
+</div>
